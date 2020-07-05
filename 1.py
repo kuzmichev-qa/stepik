@@ -3,7 +3,8 @@ import math
 
 
 def calc(x):
-    return str(math.log(abs(12*math.sin(int(x)))))
+    return str(math.log(abs(12 * math.sin(int(x)))))
+
 
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -16,4 +17,3 @@ x_element = driver.find_element_by_xpath("//*[@id='input_value']").text
 y = calc(x_element)
 driver.find_element_by_xpath("//*[@id = 'answer']").send_keys(y)
 driver.find_element_by_xpath("//button[@class = 'btn btn-primary']").click()
-
